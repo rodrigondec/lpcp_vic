@@ -1,0 +1,19 @@
+BNF geral (Incompleta)
+
+<main> -> "void main()" <corpo_func>
+<corpo_func> -> "{" <linhas> <retorno> "}"
+
+<linhas> -> <linha> ";" <linhas> | <linha>
+<linha> -> <atribuição> ";" | <strtura_controle> ";" | ""
+<atribuiçao> -> "identificador" "=" <expressão>
+
+<retorno> -> "return" <expressão> ";" | ""
+<expressão> -> <termo> "operador" <expressão> | <termo>
+<termo> -> "const" | "identificador"
+
+<arg_list> -> <arg> "," <arg_list> | <arg>
+<arg> -> <var> | ""
+<var> -> <tipo> "identificador"
+
+<tipo_retorno> -> <tipo> | "void"
+<tipo> -> "int" | "float" | "char" | "double"
