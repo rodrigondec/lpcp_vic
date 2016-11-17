@@ -1,0 +1,28 @@
+-- Programa-Exemplo:
+
+program main
+var x : int;
+begin
+   x := 1;
+   if x > 0 then write "ok!"
+end
+
+-- Resultado do "analisador léxico":
+
+["program","main","var","x",":","int;","begin","x",":=","1;",
+"if","x",">","0","then","write","\"ok!\"","end"]
+
+-- Regras Sintáticas para o Programa-Exemplo:
+
+<Program> -> program <Id> [<Var_Section>] begin [<Stmts>] end
+<Var_Section> -> var <Var_Decl_List> 
+<Var_Decl_List> -> <Var_Decl> [<Var_Decl_List>]
+<Var_Decl> -> <Id_List> : <Data_Type> ;
+<Id_List> -> <Id> [, <Id_List>]
+<Data_Type> -> int | real | boolean | string
+<Stmts> -> <Stmt> [; <Stmts>]
+<Stmts> -> <Assign> | <If> | write <Data_Type>
+<Assign> -> <Id> := <Exp>
+<Exp> -> <Id> | <Num>
+<If> -> if <Bool_Exp> then <Stmts>
+<Bool_Exp> -> true | false | <ID> | <Exp> (>|<|>=|<=|==|<>) <Exp>
