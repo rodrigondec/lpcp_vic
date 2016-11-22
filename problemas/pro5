@@ -1,3 +1,20 @@
+void mdc(int m, int n, int &r){
+	if(n%m == 0){
+		r = n;
+	}
+	else if(m%n == 0){
+		r = m;
+	}
+	else if(m > n){
+		mdc(m%n, n, r);
+	}
+	else{
+		mdc(m, n%m, r);
+	}
+}
+
 main{
-	
+	int m, n, r = 6, 9, 0;
+	mdc(m, n, r);
+	escreva >> ">>> O maior divisor comum é " << r << pulalinha;
 }
