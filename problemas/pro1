@@ -1,0 +1,47 @@
+struct racional
+{
+	int dividendo;
+	int divisor;
+}
+
+void reducao(racional & numero)
+{
+	
+}
+
+
+main
+{
+	racional x, y;
+	int c;
+	racional soma;
+
+	escreva << ">>> Escreva o valor do dividendo e do divisor de 'x': " << pulaLinha;
+
+	leia >> x.dividendo;
+	leia >> x.divisor;
+
+	escreva << ">>> Escreva o valor do dividendo e do divisor de 'y': " << pulaLinha;
+
+	leia >> y.dividendo;
+	leia >> y.divisor;
+
+	escreva << ">>> Escreva o valor de 'c': " << pulaLinha;
+
+	leia >> c;
+
+	//elevar o x ao quadrado
+
+	x.dividendo = x.dividendo * x.dividendo;
+	x.divisor = x.divisor * x.divisor;
+
+	//subitrair
+	soma.dividendo = x.dividendo * y.divisor - y.dividendo * x.divisor;
+	soma.divisor = x.divisor*y.dividendo;
+
+	reducao(soma);
+
+	soma.dividendo = soma.dividendo + c * soma.divisor;
+
+	reducao(soma);
+}
