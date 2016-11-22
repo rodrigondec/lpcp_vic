@@ -1,0 +1,67 @@
+main
+{
+	matriz &a;
+	matriz &b;
+
+	leia >> a;
+	leia >> b;
+
+	matriz soma(a.coluna,a.linha);
+	matriz produto(a.coluna, b.linha);
+	
+	soma = a+b;
+
+	escreva << soma;
+
+	produto = a*b;
+
+	escreva << produto;
+}
+
+ou
+
+caso a quantidade de linhas e colunas forem fornecidas
+
+main
+{
+	int i, j;
+	int linhaA, colunaA;
+	int linhaB, colunaB;
+
+	leia >> linhaA;
+	leia >> colunaA;
+
+	matriz a (linhaA, colunaA);
+
+	for (i = 0; i < linhaA; i++)
+	{
+		for(j = 0; j < colunaA; j++)
+		{
+			leia >> a(i,j);
+		}
+	}
+
+	matriz b(linhaB, colunaB);
+
+	for (i = 0; i < linhaB; i++)
+	{
+		for(j = 0; j < colunaB; j++)
+		{
+			leia >> b(i,j);
+		}
+	}
+
+	leia >> a;
+	leia >> b;
+
+	matriz soma(a.coluna,a.linha);
+	matriz produto(a.coluna, b.linha);
+	
+	soma = a+b;
+
+	escreva << soma;
+
+	produto = a*b;
+
+	escreva << produto;
+}
