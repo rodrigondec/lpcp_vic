@@ -1,0 +1,52 @@
+struct intervalo_fechado{
+	int inicio, fim;
+}
+
+bool esta_dentro(int numero, intervalo_fechado faixa){
+	if(faixa.inicio < numero && numero < faixa.fim){
+		return true;
+	}
+	return false;
+}
+
+main{
+	intervalo_fechado lista[];
+	intervalo_fechado a, b, c, d;
+	a.inicio = 0;
+	a.fim = 25;
+	b.inicio = 26;
+	b.fim = 50;
+	c.inicio = 51;
+	c.fim = 75;
+	d.inicio = 76;
+	d.fim = 100;
+	lista.push(a);
+	lista.push(b);
+	lista.push(c);
+	lista.push(d);
+
+	int valores[];
+
+	while(true){
+		int a;
+		escreva << ">>> Digite um valor qualquer. Digite um valor negativo para encerrar os valores." << pulalinha;
+		leia >> a;
+		if(a >= 0){
+			valores.push(a);
+		}
+		else{
+			break;
+		}
+	}
+	
+	
+	for(int i = 0; i < lista.size(); i++){
+		int total = 0;
+		for(int j = 0; < valores.size(); j++){
+			if(esta_dentro(valores[j], lista[i])){
+				total++;
+			}
+		}
+		escreva << ">>> O total de valores no intervalo [" << lista[i].inicio << ", " << lista[i].fim << "] é " << total;
+	}
+}
