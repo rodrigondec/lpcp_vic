@@ -1,0 +1,112 @@
+struct racional_t
+{
+	int numerador;
+	int denominador;
+}
+
+racional_t racinal(int a, int b)
+{
+	racinal_t newRacional;
+
+	newRacional.numerador = a;
+	newRacional.denominador = b;
+
+	return newRacional;	
+}
+
+bool igual(racional_t a, racional_t b)
+{
+	if (a.numerador < b.numerador)
+	{
+		if(b.numerador/a.numerador == b.denominador/a.denominador)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else
+	{
+		if(a.numerador/b.numerador == a.denominador/b.denominador)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}
+
+racional_t soma(racional_t a, racional_t b)
+{
+	
+}
+
+racional_t negacao(racional_t a)
+{
+	
+}
+
+racional_t subtracao(racional_t a, racional_t b)
+{
+	
+}
+
+racional_t multiplicacao(racional_t a, racional_t b)
+{
+	
+}
+
+racional_t inverso(racional_t a, racional_t b)
+{
+	
+}
+
+racional_t divisao(racional_t a, racional_t b)
+{
+	
+}
+
+main
+{
+	int iA, iB;
+	racional_t rA, rB;
+	racional_t soma, negacao, subtracao, multiplicacao, inverso, divisao;
+
+	escreva << ">>> digite o valor desejado para o numerador e denominador para o racinal a: " << pulaLinha;
+
+	leia >> iA >> iB;
+
+	rA = racional(iA, iB);
+
+	escreva << ">>> digite o valor desejado para o numerador e denominador para o racinal b: " << pulaLinha;
+
+	leia << rB.numerador << rB.denominador;
+
+	if (igual(rA, rB))
+	{
+		escreva << ">>> iguais" << pulaLinha;
+	}
+	else
+	{
+		escreva << ">>> diferentes" << pulaLinha;
+	}
+
+	soma = soma(rA,rB);
+	negacao = negacao(rA);
+	subtracao = subtracao(rA,rB);
+	multiplicacao = multiplicacao(rA,rB);
+	inverso = inverso(rA);
+	divisao = divisao(rA,rB);
+
+	escreva << "soma = " << soma << pulaLinha;
+	escreva << "negacao = " << negacao << pulaLinha;
+	escreva << "subtracao = " << subtracao << pulaLinha;
+	escreva << "multiplicacao = " << multiplicacao << pulaLinha;
+	escreva << "inverso = " << inverso << pulaLinha;
+	escreva << "divisao = " << divisao << pulaLinha;
+
+}
